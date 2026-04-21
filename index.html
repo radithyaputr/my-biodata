@@ -1187,7 +1187,7 @@
 
   emailjs.send("service_hcimdm4", "template_k0ybpmv", {
     from_name: nama,
-    from_email: email,
+    reply_to: email,
     message: pesan,
     to_email: "radit614@gmail.com"
   })
@@ -1214,14 +1214,6 @@
     emailjs.init("CVZLBMMGIEHPKUbD5"); // nanti diganti
   })();
 </script>
-<form id="contact-form">
-  <input type="text" name="from_name" placeholder="Nama Anda" required>
-  
-  <input type="email" name="reply_to" placeholder="Email Anda" required>
-  
-  <textarea name="message" placeholder="Tulis pesan..." required></textarea>
-  
-  <button type="submit">Kirim Sinyal 🚀</button>
 </form>
 </body>
 </html>
