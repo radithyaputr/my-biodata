@@ -1,0 +1,1227 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adiel Radithya Putra Irwana — Future NASA Engineer</title>
+
+  <!-- Favicon (rocket emoji via data URI) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --space-black: #05060f;
+      --space-deep: #0a0e27;
+      --space-purple: #1a0b3d;
+      --nasa-red: #fc3d21;
+      --nasa-blue: #0b3d91;
+      --cyan-glow: #00e5ff;
+      --neon-pink: #ff2e92;
+      --star-white: #ffffff;
+      --text-muted-space: #a0a8c0;
+    }
+
+    * { scroll-behavior: smooth; }
+
+    body {
+      background: radial-gradient(ellipse at top, #0a0e27 0%, #05060f 60%, #000000 100%);
+      color: #e6e9f2;
+      font-family: 'Space Grotesk', sans-serif;
+      overflow-x: hidden;
+      margin: 0;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    /* Custom cursor glow */
+    .cursor-glow {
+      position: fixed;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,229,255,0.12) 0%, rgba(0,229,255,0) 60%);
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      transition: opacity 0.3s;
+    }
+
+    /* Particles background */
+    #particles-js {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+    }
+
+    /* Shooting stars */
+    .shooting-star {
+      position: fixed;
+      width: 2px;
+      height: 2px;
+      background: white;
+      border-radius: 50%;
+      box-shadow: 0 0 6px 1px rgba(255,255,255,0.8);
+      z-index: 1;
+      animation: shoot 4s linear infinite;
+    }
+    .shooting-star::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100px;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(255,255,255,0.8), transparent);
+      transform: translateX(-100%);
+    }
+    @keyframes shoot {
+      0% { transform: translate(0,0); opacity: 1; }
+      70% { opacity: 1; }
+      100% { transform: translate(-800px, 600px); opacity: 0; }
+    }
+
+    h1, h2, h3, .brand-font {
+      font-family: 'Orbitron', sans-serif;
+      letter-spacing: 1px;
+    }
+
+    /* Wrapper above background */
+    .content-wrapper { position: relative; z-index: 2; }
+
+    /* NAVBAR */
+    .navbar {
+      background: rgba(5,6,15,0.55) !important;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(0,229,255,0.18);
+      transition: background .4s ease;
+    }
+    .navbar-brand {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--cyan-glow), var(--neon-pink));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-size: 1.25rem;
+    }
+    .navbar .nav-link {
+      color: #cfd4e4 !important;
+      font-weight: 500;
+      margin: 0 4px;
+      padding: 8px 14px !important;
+      border-radius: 999px;
+      transition: all .3s;
+      position: relative;
+    }
+    .navbar .nav-link:hover {
+      color: var(--cyan-glow) !important;
+      background: rgba(0,229,255,0.08);
+      box-shadow: 0 0 20px rgba(0,229,255,0.25);
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 30%, rgba(252,61,33,0.18), transparent 50%),
+        radial-gradient(ellipse at 80% 70%, rgba(11,61,145,0.35), transparent 50%);
+      z-index: -1;
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 4.2rem);
+      font-weight: 900;
+      line-height: 1.05;
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #00e5ff 0%, #ff2e92 50%, #fc3d21 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: hue 8s infinite linear;
+    }
+    @keyframes hue {
+      0%,100% { filter: hue-rotate(0deg); }
+      50% { filter: hue-rotate(30deg); }
+    }
+
+    .typing-cursor { color: var(--cyan-glow); animation: blink 1s step-end infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+
+    .badge-pill-space {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(0,229,255,0.08);
+      border: 1px solid rgba(0,229,255,0.3);
+      color: var(--cyan-glow);
+      font-size: .85rem;
+      font-family: 'Orbitron', sans-serif;
+      letter-spacing: 2px;
+    }
+    .badge-pill-space .dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--cyan-glow);
+      box-shadow: 0 0 10px var(--cyan-glow);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%,100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.4); opacity: .6; }
+    }
+
+    /* Buttons */
+    .btn-space {
+      background: linear-gradient(135deg, var(--nasa-red), var(--neon-pink));
+      border: none;
+      color: #fff;
+      padding: 12px 30px;
+      border-radius: 999px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      font-family: 'Orbitron', sans-serif;
+      position: relative;
+      overflow: hidden;
+      transition: transform .3s, box-shadow .3s;
+      box-shadow: 0 8px 30px rgba(252,61,33,0.35);
+    }
+    .btn-space:hover {
+      transform: translateY(-3px);
+      color: #fff;
+      box-shadow: 0 12px 40px rgba(255,46,146,0.6), 0 0 30px rgba(0,229,255,0.3);
+    }
+    .btn-outline-space {
+      background: transparent;
+      border: 1px solid rgba(0,229,255,0.5);
+      color: var(--cyan-glow);
+      padding: 12px 30px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-family: 'Orbitron', sans-serif;
+      letter-spacing: 1px;
+      transition: all .3s;
+    }
+    .btn-outline-space:hover {
+      background: rgba(0,229,255,0.1);
+      color: #fff;
+      box-shadow: 0 0 30px rgba(0,229,255,0.4);
+      border-color: var(--cyan-glow);
+    }
+
+    /* Planet orbiting */
+    .planet-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    .planet {
+      position: absolute;
+      inset: 12%;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 30% 30%, #ffb974 0%, #fc3d21 35%, #7a1010 75%, #2b0404 100%);
+      box-shadow:
+        inset -30px -40px 80px rgba(0,0,0,0.7),
+        0 0 80px rgba(252,61,33,0.5),
+        0 0 140px rgba(11,61,145,0.4);
+      animation: float 6s ease-in-out infinite;
+    }
+    .planet::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background:
+        radial-gradient(ellipse at 60% 40%, rgba(255,255,255,0.08) 0%, transparent 50%),
+        radial-gradient(circle at 20% 70%, rgba(0,0,0,0.4) 0%, transparent 30%);
+    }
+    .ring {
+      position: absolute;
+      inset: 0;
+      border: 2px dashed rgba(0,229,255,0.25);
+      border-radius: 50%;
+      animation: spin 20s linear infinite;
+    }
+    .ring-2 {
+      inset: 8%;
+      border: 1px solid rgba(255,46,146,0.25);
+      animation: spin 30s linear reverse infinite;
+    }
+    .moon {
+      position: absolute;
+      width: 24px; height: 24px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #fff, #a0a8c0 60%, #333);
+      top: 50%; left: -4px;
+      transform: translateY(-50%);
+      box-shadow: 0 0 20px rgba(255,255,255,0.5);
+    }
+    .orbit {
+      position: absolute;
+      inset: -5%;
+      animation: spin 12s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    /* SECTION TITLE */
+    .section {
+      padding: 100px 0;
+      position: relative;
+    }
+    .section-label {
+      color: var(--cyan-glow);
+      font-family: 'Orbitron', sans-serif;
+      letter-spacing: 4px;
+      font-size: .85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900;
+      margin-bottom: 48px;
+    }
+
+    /* GLASS CARD */
+    .glass {
+      background: rgba(15,20,45,0.45);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 24px;
+      padding: 32px;
+      transition: transform .4s cubic-bezier(.2,.9,.3,1.2), border-color .4s, box-shadow .4s;
+      position: relative;
+      overflow: hidden;
+    }
+    .glass::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(0,229,255,0.08), transparent);
+      transition: left .8s;
+    }
+    .glass:hover::before { left: 100%; }
+    .glass:hover {
+      transform: translateY(-8px);
+      border-color: rgba(0,229,255,0.35);
+      box-shadow: 0 20px 60px rgba(0,229,255,0.15), 0 0 40px rgba(255,46,146,0.08);
+    }
+    .glass .icon-box {
+      width: 56px; height: 56px;
+      border-radius: 16px;
+      display: inline-flex;
+      align-items: center; justify-content: center;
+      background: linear-gradient(135deg, rgba(0,229,255,0.2), rgba(255,46,146,0.2));
+      color: var(--cyan-glow);
+      font-size: 1.5rem;
+      margin-bottom: 18px;
+      box-shadow: 0 0 25px rgba(0,229,255,0.25);
+    }
+
+    /* PROFILE CARD 3D TILT */
+    .profile-card {
+      border-radius: 28px;
+      overflow: hidden;
+      position: relative;
+      background: linear-gradient(135deg, rgba(11,61,145,0.4), rgba(252,61,33,0.25));
+      padding: 6px;
+      transition: transform .2s;
+      transform-style: preserve-3d;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.5), 0 0 60px rgba(0,229,255,0.15);
+    }
+    .profile-card-inner {
+      border-radius: 22px;
+      overflow: hidden;
+      position: relative;
+      background: #0a0e27;
+    }
+    .profile-card img {
+      width: 100%;
+      display: block;
+      transition: transform .6s;
+    }
+    .profile-card:hover img { transform: scale(1.05); }
+    .profile-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 40%, rgba(5,6,15,0.95));
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 24px;
+    }
+    .profile-card-overlay h4 {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 900;
+      color: #fff;
+      margin-bottom: 4px;
+      font-size: 1.25rem;
+    }
+    .profile-card-overlay .sub {
+      color: var(--cyan-glow);
+      font-size: .85rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    /* STAT */
+    .stat-value {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 900;
+      font-size: 2.4rem;
+      background: linear-gradient(135deg, var(--cyan-glow), var(--neon-pink));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .stat-label {
+      font-size: .8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-muted-space);
+    }
+
+    /* INFO ROW */
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 14px 0;
+      border-bottom: 1px dashed rgba(255,255,255,0.08);
+    }
+    .info-row:last-child { border-bottom: none; }
+    .info-label {
+      color: var(--text-muted-space);
+      font-size: .9rem;
+      letter-spacing: 1px;
+    }
+    .info-value {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    /* SKILL BAR */
+    .skill-row { margin-bottom: 20px; }
+    .skill-head {
+      display: flex; justify-content: space-between;
+      font-family: 'Orbitron', sans-serif;
+      font-size: .85rem;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+    .skill-track {
+      height: 8px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .skill-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--cyan-glow), var(--neon-pink), var(--nasa-red));
+      border-radius: 999px;
+      width: 0;
+      transition: width 1.6s cubic-bezier(.2,.9,.3,1.2);
+      box-shadow: 0 0 20px rgba(0,229,255,0.5);
+    }
+
+    /* NASA SECTION */
+    .nasa-hero {
+      position: relative;
+      border-radius: 28px;
+      overflow: hidden;
+      min-height: 480px;
+      display: flex;
+      align-items: center;
+      background-image:
+        linear-gradient(120deg, rgba(5,6,15,0.85) 0%, rgba(11,61,145,0.3) 50%, rgba(5,6,15,0.4) 100%),
+        url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      border: 1px solid rgba(0,229,255,0.2);
+    }
+    .nasa-hero .inner {
+      padding: 60px;
+      max-width: 720px;
+      position: relative;
+      z-index: 2;
+    }
+    .nasa-logo-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 18px;
+      border-radius: 999px;
+      background: rgba(252,61,33,0.15);
+      border: 1px solid rgba(252,61,33,0.5);
+      color: #ffb4a7;
+      font-family: 'Orbitron', sans-serif;
+      font-size: .8rem;
+      letter-spacing: 3px;
+      margin-bottom: 18px;
+    }
+
+    /* HOBBIES */
+    .hobby-card {
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      min-height: 320px;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: flex-end;
+      padding: 28px;
+      transition: transform .5s;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .hobby-card::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, transparent 30%, rgba(5,6,15,0.95));
+      transition: opacity .4s;
+    }
+    .hobby-card:hover { transform: scale(1.02) translateY(-6px); }
+    .hobby-card .content { position: relative; z-index: 2; }
+    .hobby-card h4 {
+      font-family: 'Orbitron', sans-serif;
+      color: #fff;
+      font-weight: 900;
+      margin-bottom: 6px;
+    }
+    .hobby-card p { color: #cfd4e4; margin: 0; }
+    .hobby-gaming {
+      background-image: linear-gradient(135deg, rgba(255,46,146,0.3), rgba(11,61,145,0.4)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1200&q=80');
+    }
+    .hobby-sport {
+      background-image: linear-gradient(135deg, rgba(252,61,33,0.3), rgba(0,229,255,0.3)), url('https://images.unsplash.com/photo-1551958219-acbc608c6377?w=1200&q=80');
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 40px 0;
+      text-align: center;
+      color: var(--text-muted-space);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      margin-top: 60px;
+    }
+    .social-btn {
+      width: 44px; height: 44px;
+      display: inline-flex;
+      align-items: center; justify-content: center;
+      border-radius: 50%;
+      background: rgba(0,229,255,0.08);
+      border: 1px solid rgba(0,229,255,0.25);
+      color: var(--cyan-glow);
+      margin: 0 6px;
+      transition: all .3s;
+      text-decoration: none;
+    }
+    .social-btn:hover {
+      background: var(--cyan-glow);
+      color: #05060f;
+      transform: translateY(-3px);
+      box-shadow: 0 0 25px var(--cyan-glow);
+    }
+
+    /* SCROLL TOP */
+    .scroll-top {
+      position: fixed;
+      bottom: 30px; right: 30px;
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--cyan-glow), var(--neon-pink));
+      color: #05060f;
+      display: inline-flex;
+      align-items: center; justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s, transform .3s;
+      z-index: 50;
+      text-decoration: none;
+      box-shadow: 0 10px 30px rgba(0,229,255,0.35);
+    }
+    .scroll-top.visible { opacity: 1; pointer-events: auto; }
+    .scroll-top:hover { transform: translateY(-4px); color: #05060f; }
+
+    /* LOADER */
+    .loader {
+      position: fixed; inset: 0;
+      background: #05060f;
+      z-index: 9999;
+      display: flex;
+      align-items: center; justify-content: center;
+      transition: opacity .6s, visibility .6s;
+    }
+    .loader.hidden { opacity: 0; visibility: hidden; }
+    .rocket-loader {
+      font-size: 3rem;
+      animation: launch 1.5s ease-in-out infinite;
+    }
+    @keyframes launch {
+      0% { transform: translateY(20px) rotate(-45deg); opacity: .3; }
+      50% { transform: translateY(-10px) rotate(-45deg); opacity: 1; }
+      100% { transform: translateY(20px) rotate(-45deg); opacity: .3; }
+    }
+
+    /* Selection color */
+    ::selection { background: var(--cyan-glow); color: #05060f; }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      .section { padding: 70px 0; }
+      .nasa-hero .inner { padding: 32px; }
+      .glass { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="rocket-loader">🚀</div>
+  </div>
+
+  <!-- Cursor glow -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Particles background -->
+  <div id="particles-js"></div>
+
+  <!-- Shooting stars -->
+  <div class="shooting-star" style="top: 10%; right: 0; animation-delay: 0s;"></div>
+  <div class="shooting-star" style="top: 30%; right: 0; animation-delay: 2s;"></div>
+  <div class="shooting-star" style="top: 60%; right: 0; animation-delay: 4s;"></div>
+
+  <div class="content-wrapper">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#home">
+          <i class="fa-solid fa-rocket me-2" style="color: var(--nasa-red);"></i>RADIT.gov
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+          <i class="fa-solid fa-bars text-white"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navMain">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#biodata">Biodata</a></li>
+            <li class="nav-item"><a class="nav-link" href="#hobbies">Hobbies</a></li>
+            <li class="nav-item"><a class="nav-link" href="#nasa">Mission</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7" data-aos="fade-right">
+            <span class="badge-pill-space mb-4">
+              <span class="dot"></span> MISSION: EARTH-01 · ACTIVE
+            </span>
+            <h1>
+              Halo, gw <span class="gradient-text">Adiel Radithya</span><br>
+              <span id="typed" class="text-white"></span><span class="typing-cursor">|</span>
+            </h1>
+            <p class="lead mt-4" style="color: var(--text-muted-space); max-width: 560px;">
+              Siswa <strong class="text-white">XI TJKT 1</strong> yang bermimpi suatu hari nanti kerja di
+              <strong style="color: var(--nasa-red);">NASA</strong> — menjelajah bintang, ngoding roket,
+              dan bikin umat manusia jadi multi-planet species. 🚀
+            </p>
+            <div class="mt-4 d-flex flex-wrap gap-3">
+              <a href="#about" class="btn btn-space">
+                <i class="fa-solid fa-user-astronaut me-2"></i> Kenalan Yuk
+              </a>
+              <a href="#nasa" class="btn btn-outline-space">
+                <i class="fa-solid fa-satellite me-2"></i> Lihat Misi
+              </a>
+            </div>
+
+            <div class="row mt-5 g-4" style="max-width: 520px;">
+              <div class="col-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="stat-value" data-count="16">0</div>
+                <div class="stat-label">Years Old</div>
+              </div>
+              <div class="col-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="stat-value" data-count="1">0</div>
+                <div class="stat-label">NASA Dream</div>
+              </div>
+              <div class="col-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="stat-value" data-count="99">0</div>
+                <div class="stat-label">% Semangat</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5" data-aos="zoom-in" data-aos-delay="200">
+            <div class="planet-wrap">
+              <div class="ring"></div>
+              <div class="ring ring-2"></div>
+              <div class="orbit"><div class="moon"></div></div>
+              <div class="planet"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-5" data-aos="fade-right">
+            <div class="profile-card" id="profileCard">
+              <div class="profile-card-inner">
+                <img src="https://customer-assets.emergentagent.com/job_bootstrap-guide-1/artifacts/er2eiylq_WhatsApp%20Image%202026-04-20%20at%2014.11.07.jpeg"
+                     alt="Adiel Radithya Putra Irwana"
+                     onerror="this.src='https://customer-assets.emergentagent.com/job_bootstrap-guide-1/artifacts/vyj60y79_WhatsApp%20Image%202026-04-20%20at%2014.11.07.jpeg'">
+                <div class="profile-card-overlay">
+                  <h4>Adiel Radithya Putra Irwana</h4>
+                  <div class="sub">Future NASA Engineer</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7" data-aos="fade-left">
+            <div class="section-label">// ABOUT ME</div>
+            <h2 class="section-title">Kenalan dulu sama <span class="gradient-text">gue</span></h2>
+            <p style="color: var(--text-muted-space); line-height: 1.9;">
+              Gw <strong class="text-white">Adiel Radithya Putra Irwana</strong>, siswa kelas
+              <strong class="text-white">XI TJKT 1</strong> (Teknik Jaringan Komputer & Telekomunikasi).
+              Passion gw ada di dunia teknologi, luar angkasa, dan hal-hal yang bikin otak
+              mikir keras tapi puas banget kalo berhasil. Di waktu luang, gw hobi
+              <strong style="color: var(--neon-pink);">main game</strong> buat asah strategi & refleks,
+              dan <strong style="color: var(--cyan-glow);">olahraga</strong> biar badan sama pikiran tetep fit.
+            </p>
+            <p style="color: var(--text-muted-space); line-height: 1.9;">
+              Mimpi terbesar gw? Suatu hari nanti nama gw kepajang di badge
+              <strong style="color: var(--nasa-red);">NASA</strong> 🚀 — ikut ngerjain misi
+              eksplorasi luar angkasa, mungkin jadi network engineer buat komunikasi deep-space,
+              atau terbang ke Mars. Big dream, big hustle. amiin atas izin ALLAH SWT.
+            </p>
+
+            <div class="row mt-4 g-3">
+              <div class="col-sm-6">
+                <div class="glass p-3 d-flex align-items-center gap-3">
+                  <div class="icon-box m-0" style="width: 44px; height: 44px; font-size:1.1rem;">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                  </div>
+                  <div>
+                    <div class="stat-label">Jurusan</div>
+                    <div class="info-value">TJKT</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="glass p-3 d-flex align-items-center gap-3">
+                  <div class="icon-box m-0" style="width: 44px; height: 44px; font-size:1.1rem; color: var(--neon-pink);">
+                    <i class="fa-solid fa-bolt"></i>
+                  </div>
+                  <div>
+                    <div class="stat-label">Status</div>
+                    <div class="info-value">Aktif Belajar</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BIODATA -->
+    <section class="section" id="biodata">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <div class="section-label">// PERSONAL DATA</div>
+          <h2 class="section-title">Biodata <span class="gradient-text">Singkat</span></h2>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-6" data-aos="fade-up">
+            <div class="glass h-100">
+              <div class="icon-box"><i class="fa-solid fa-id-card"></i></div>
+              <h3 class="h5 text-white mb-3 brand-font">Identitas</h3>
+              <div class="info-row">
+                <span class="info-label">Nama Lengkap</span>
+                <span class="info-value">Adiel Radithya Putra Irwana</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label">Panggilan</span>
+                <span class="info-value">radit</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label">Kelas</span>
+                <span class="info-value">XI TJKT 1</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label">Jurusan</span>
+                <span class="info-value">Teknik Jaringan Komputer & Telekomunikasi</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label">Status</span>
+                <span class="info-value" style="color: var(--cyan-glow);">● Online</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="glass h-100">
+              <div class="icon-box" style="color: var(--neon-pink);"><i class="fa-solid fa-bullseye"></i></div>
+              <h3 class="h5 text-white mb-3 brand-font">Cita-cita & Passion</h3>
+              <div class="info-row">
+                <span class="info-label">Cita-cita</span>
+                <span class="info-value" style="color: var(--nasa-red);">Kerja di NASA 🚀</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label">Hobi #1</span>
+                <span class="info-value"><i class="fa-solid fa-gamepad me-2" style="color: var(--neon-pink);"></i>Main Game</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label">Hobi #2</span>
+                <span class="info-value"><i class="fa-solid fa-dumbbell me-2" style="color: var(--cyan-glow);"></i>Olahraga</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label">Minat</span>
+                <span class="info-value">Networking, Space Tech</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label">Motto</span>
+                <span class="info-value">"Reach for the stars 🌟"</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="row mt-5 g-4">
+          <div class="col-12" data-aos="fade-up">
+            <div class="section-label text-center">// CORE SKILLS</div>
+            <h3 class="text-center text-white brand-font mb-5">Progress Level</h3>
+          </div>
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="glass">
+              <div class="skill-row">
+                <div class="skill-head"><span>Networking (TJKT)</span><span>85%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-width="85%"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-head"><span>HTML / CSS / Bootstrap</span><span>80%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-width="80%"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-head"><span>Problem Solving</span><span>78%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-width="78%"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="glass">
+              <div class="skill-row">
+                <div class="skill-head"><span>Gaming Strategy</span><span>95%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-width="95%"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-head"><span>Sport & Stamina</span><span>88%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-width="88%"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-head"><span>Space Knowledge</span><span>70%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-width="70%"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOBBIES -->
+    <section class="section" id="hobbies">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <div class="section-label">// WHAT I LOVE</div>
+          <h2 class="section-title">Hobi <span class="gradient-text">Favorit</span></h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6" data-aos="fade-up">
+            <div class="hobby-card hobby-gaming">
+              <div class="content">
+                <div class="badge-pill-space mb-3" style="color: var(--neon-pink); border-color: rgba(255,46,146,0.4); background: rgba(255,46,146,0.1);">
+                  <span class="dot" style="background: var(--neon-pink); box-shadow: 0 0 10px var(--neon-pink);"></span> HOBI #01
+                </div>
+                <h4>🎮 Bermain Game</h4>
+                <p>Strategi, refleks, dan ketenangan dibentuk dari setiap ronde.
+                  Buat gw, gaming bukan cuma hiburan — itu latihan otak.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="150">
+            <div class="hobby-card hobby-sport">
+              <div class="content">
+                <div class="badge-pill-space mb-3">
+                  <span class="dot"></span> HOBI #02
+                </div>
+                <h4>🏃‍♂️ Berolahraga</h4>
+                <p>Badan sehat, pikiran kuat. Olahraga bikin gw siap lahir batin
+                  buat mimpi besar — termasuk jadi astronot kelak.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NASA MISSION -->
+    <section class="section" id="nasa">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <div class="section-label">// THE BIG DREAM</div>
+          <h2 class="section-title">Misi Menuju <span class="gradient-text">NASA</span></h2>
+        </div>
+        <div class="nasa-hero" data-aos="zoom-in">
+          <div class="inner">
+            <div class="nasa-logo-badge">
+              <i class="fa-solid fa-meteor"></i> NATIONAL AERONAUTICS & SPACE ADMINISTRATION
+            </div>
+            <h3 class="text-white brand-font mb-3" style="font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 900;">
+              "Ad Astra Per Aspera"
+            </h3>
+            <p style="color: #cfd4e4; line-height: 1.9; font-size: 1.05rem;">
+              Menuju bintang melalui kesulitan. Gw percaya, setiap baris kode yang gw pelajari hari ini,
+              setiap konsep networking yang gw kuasain di TJKT, setiap keringat yang gw
+              keluarin pas olahraga — itu semua bagian dari perjalanan panjang menuju
+              <strong style="color: var(--nasa-red);">NASA</strong>.
+            </p>
+            <div class="row mt-4 g-3">
+              <div class="col-sm-4">
+                <div class="glass p-3 text-center">
+                  <div class="h4 brand-font gradient-text mb-1">2026</div>
+                  <div class="stat-label">Start Now</div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="glass p-3 text-center">
+                  <div class="h4 brand-font gradient-text mb-1">∞</div>
+                  <div class="stat-label">Mimpi</div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="glass p-3 text-center">
+                  <div class="h4 brand-font gradient-text mb-1">T-Minus</div>
+                  <div class="stat-label">Countdown</div>
+                </div>
+              </div>
+            </div>
+            <a href="#contact" class="btn btn-space mt-4">
+              <i class="fa-solid fa-paper-plane me-2"></i> Join the Mission
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <div class="section-label">// GET IN TOUCH</div>
+          <h2 class="section-title">HUBUNGI <span class="gradient-text">SAYA</span></h2>
+        </div>
+        <div class="row g-5">
+          <div class="col-lg-5" data-aos="fade-right">
+            <div class="glass h-100">
+              <h3 class="h5 text-white brand-font mb-4">Info Kontak</h3>
+              <div class="d-flex align-items-center gap-3 mb-4">
+                <div class="icon-box m-0" style="width: 44px; height: 44px; font-size:1rem;">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div>
+                  <div class="stat-label">Email</div>
+                  <div class="info-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="90f1f4f9f5bee2f1f4f9e4f8e9f1d0f5fdf1f9fcbef3fffd">radith614@gmail.com</a></div>
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-3 mb-4">
+                <div class="icon-box m-0" style="width: 44px; height: 44px; font-size:1rem; color: var(--neon-pink);">
+                  <i class="fa-solid fa-school"></i>
+                </div>
+                <div>
+                  <div class="stat-label">Sekolah</div>
+                  <div class="info-value">SMKN 1 KOTA BENGKULU</div>
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-3">
+                <div class="icon-box m-0" style="width: 44px; height: 44px; font-size:1rem; color: var(--nasa-red);">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                  <div class="stat-label">Lokasi</div>
+                  <div class="info-value">Indonesia 🇮🇩</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7" data-aos="fade-left">
+            <form class="glass" onsubmit="handleSubmit(event)">
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label class="stat-label mb-2">Nama</label>
+                  <input type="text" class="form-control bg-transparent text-white border-secondary" required placeholder="Nama lo...">
+                </div>
+                <div class="col-sm-6">
+                  <label class="stat-label mb-2">Email</label>
+                  <input type="email" class="form-control bg-transparent text-white border-secondary" required placeholder="email@domain.com">
+                </div>
+                <div class="col-12">
+                  <label class="stat-label mb-2">Pesan</label>
+                  <textarea rows="5" class="form-control bg-transparent text-white border-secondary" required placeholder="Halo radit ganteng hehe, ..."></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-space w-100">
+                    <i class="fa-solid fa-paper-plane me-2"></i> Kirim Sinyal ke Radit
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="mb-3">
+          <a href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-btn"><i class="fa-brands fa-github"></i></a>
+          <a href="#" class="social-btn"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" class="social-btn"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <p class="mb-1 brand-font" style="color:#fff;">ADIEL RADITHYA PUTRA IRWANA</p>
+        <p class="mb-0" style="font-size: .85rem;">
+          &copy; 2026 · Built with <i class="fa-solid fa-heart" style="color: var(--nasa-red);"></i>
+          using Bootstrap 5, AOS, Typed.js, Particles.js · XI TJKT 1
+        </p>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Scroll to top -->
+  <a href="#home" class="scroll-top" id="scrollTop"><i class="fa-solid fa-arrow-up"></i></a>
+
+  <!-- Bootstrap JS -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.min.js"></script>
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+  <script>
+    // Loader
+    window.addEventListener('load', () => {
+      setTimeout(() => document.getElementById('loader').classList.add('hidden'), 600);
+    });
+
+    // AOS
+    AOS.init({ duration: 900, once: true, offset: 80 });
+
+    // Typed.js
+    new Typed('#typed', {
+      strings: [
+        'a Future NASA Engineer 🚀',
+        'siswa XI TJKT 1 👨‍💻',
+        'a Gamer & Athlete 🎮🏃',
+        'a Dream Chaser ⭐'
+      ],
+      typeSpeed: 55,
+      backSpeed: 30,
+      backDelay: 1800,
+      loop: true
+    });
+
+    // Particles.js — starfield
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 120, density: { enable: true, value_area: 900 } },
+        color: { value: ['#ffffff', '#00e5ff', '#ff2e92'] },
+        shape: { type: 'circle' },
+        opacity: { value: 0.8, random: true, anim: { enable: true, speed: 1, opacity_min: 0.1 } },
+        size: { value: 2.2, random: true },
+        line_linked: { enable: true, distance: 140, color: '#00e5ff', opacity: 0.15, width: 1 },
+        move: { enable: true, speed: 0.6, direction: 'none', random: true, out_mode: 'out' }
+      },
+      interactivity: {
+        detect_on: 'canvas',
+        events: { onhover: { enable: true, mode: 'grab' }, onclick: { enable: true, mode: 'push' }, resize: true },
+        modes: { grab: { distance: 180, line_linked: { opacity: 0.4 } }, push: { particles_nb: 4 } }
+      },
+      retina_detect: true
+    });
+
+    // Cursor glow follow
+    const cursor = document.getElementById('cursorGlow');
+    document.addEventListener('mousemove', e => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+    });
+
+    // Scroll top button
+    const scrollBtn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 500) scrollBtn.classList.add('visible');
+      else scrollBtn.classList.remove('visible');
+    });
+
+    // Counter animation
+    const counters = document.querySelectorAll('[data-count]');
+    const counterObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const el = e.target;
+          const end = parseInt(el.dataset.count);
+          let cur = 0;
+          const step = Math.max(1, Math.ceil(end / 40));
+          const id = setInterval(() => {
+            cur += step;
+            if (cur >= end) { cur = end; clearInterval(id); }
+            el.textContent = cur;
+          }, 30);
+          counterObs.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(c => counterObs.observe(c));
+
+    // Skill bar animate
+    const skillFills = document.querySelectorAll('.skill-fill');
+    const skillObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.width = e.target.dataset.width;
+          skillObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    skillFills.forEach(s => skillObs.observe(s));
+
+    // 3D tilt on profile card
+    const card = document.getElementById('profileCard');
+    if (card) {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const rotY = ((x / rect.width) - 0.5) * 18;
+        const rotX = ((y / rect.height) - 0.5) * -18;
+        card.style.transform = `perspective(900px) rotateX(${rotX}deg) rotateY(${rotY}deg) scale(1.02)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(900px) rotateX(0) rotateY(0) scale(1)';
+      });
+    }
+
+    // Navbar shrink on scroll
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) navbar.style.background = 'rgba(5,6,15,0.85)';
+      else navbar.style.background = 'rgba(5,6,15,0.55)';
+    });
+
+    // Form handler
+    function handleSubmit(e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const btn = form.querySelector('button[type="submit"]');
+  const original = btn.innerHTML;
+
+  const nama = form.querySelector('input[type="text"]').value;
+  const email = form.querySelector('input[type="email"]').value;
+  const pesan = form.querySelector('textarea').value;
+
+  btn.innerHTML = '<i class="fa-solid fa-satellite-dish me-2"></i> Transmitting...';
+  btn.disabled = true;
+
+  emailjs.send("service_hcimdm4", "template_k0ybpmv", {
+    from_name: nama,
+    from_email: email,
+    message: pesan,
+    to_email: "radit614@gmail.com"
+  })
+  .then(() => {
+    btn.innerHTML = '<i class="fa-solid fa-check me-2"></i> Sinyal Terkirim! 🚀';
+    form.reset();
+  })
+  .catch(() => {
+    btn.innerHTML = '<i class="fa-solid fa-xmark me-2"></i> Gagal Kirim';
+  })
+  .finally(() => {
+    setTimeout(() => {
+      btn.innerHTML = original;
+      btn.disabled = false;
+    }, 2000);
+  });
+}
+
+ </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"7f7b0fd8732c4326aae4b9d58d5c514a","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("CVZLBMMGIEHPKUbD5"); // nanti diganti
+  })();
+</script>
+<form id="contact-form">
+  <input type="text" name="from_name" placeholder="Nama Anda" required>
+  
+  <input type="email" name="reply_to" placeholder="Email Anda" required>
+  
+  <textarea name="message" placeholder="Tulis pesan..." required></textarea>
+  
+  <button type="submit">Kirim Sinyal 🚀</button>
+</form>
+</body>
+</html>
