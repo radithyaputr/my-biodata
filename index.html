@@ -607,6 +607,60 @@
       .nasa-hero .inner { padding: 32px; }
       .glass { padding: 24px; }
     }
+    /* --- UPDATE: PORTFOLIO SECTION --- */
+    .portfolio-card {
+      background: rgba(15,20,45,0.45);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 24px;
+      overflow: hidden;
+      transition: all .4s cubic-bezier(.2,.9,.3,1.2);
+      position: relative;
+    }
+    .portfolio-card:hover {
+      transform: translateY(-10px);
+      border-color: rgba(0,229,255,0.35);
+      box-shadow: 0 20px 60px rgba(0,229,255,0.15), 0 0 40px rgba(255,46,146,0.08);
+    }
+    .portfolio-img-wrap {
+      width: 100%;
+      height: 220px;
+      overflow: hidden;
+      position: relative;
+    }
+    .portfolio-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .6s ease;
+    }
+    .portfolio-card:hover .portfolio-img-wrap img {
+      transform: scale(1.1);
+    }
+    .portfolio-img-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(5,6,15,1) 0%, transparent 80%);
+    }
+    .portfolio-content {
+      padding: 24px;
+      position: relative;
+    }
+    .portfolio-title {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+    .portfolio-desc {
+      color: var(--text-muted-space);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    /* --- END UPDATE: PORTFOLIO SECTION --- */
   </style>
 </head>
 <body>
@@ -640,6 +694,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navMain">
           <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
             <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
             <li class="nav-item"><a class="nav-link" href="#biodata">Biodata</a></li>
@@ -1027,6 +1082,81 @@
         </div>
       </div>
     </section>
+<section class="section" id="portfolio">
+      <div class="container">
+        
+        <div class="text-center mb-5" data-aos="fade-up">
+          <div class="section-label">// MY ARCHIVES</div>
+          <h2 class="section-title">Project <span class="gradient-text">Portfolio</span></h2>
+          <p style="color: var(--text-muted-space); max-width: 600px; margin: 0 auto;">
+            Daftar misi, eksperimen, dan project yang udah berhasil gw eksekusi. 
+            Dari baris kode pertama sampai simulasi jaringan luar angkasa.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-card h-100">
+              <div class="portfolio-img-wrap">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80" alt="Project 1">
+                <div class="portfolio-img-overlay"></div>
+              </div>
+              <div class="portfolio-content">
+                <div class="badge-pill-space mb-3" style="font-size: 0.7rem; padding: 4px 10px;">
+                  <span class="dot"></span> NETWORKING
+                </div>
+                <h3 class="portfolio-title">Simulasi Topologi Jaringan</h3>
+                <p class="portfolio-desc">Membangun simulasi arsitektur jaringan skala enterprise menggunakan Cisco Packet Tracer dengan efisiensi routing tingkat tinggi.</p>
+                <a href="#" class="btn-outline-space d-inline-block" style="padding: 8px 20px; font-size: 0.85rem;">
+                  <i class="fa-solid fa-code me-2"></i>Detail Misi
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="portfolio-card h-100">
+              <div class="portfolio-img-wrap">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80" alt="Project 2">
+                <div class="portfolio-img-overlay"></div>
+              </div>
+              <div class="portfolio-content">
+                <div class="badge-pill-space mb-3" style="font-size: 0.7rem; padding: 4px 10px; color: var(--neon-pink); border-color: rgba(255,46,146,0.3); background: rgba(255,46,146,0.1);">
+                  <span class="dot" style="background: var(--neon-pink); box-shadow: 0 0 10px var(--neon-pink);"></span> WEB DEV
+                </div>
+                <h3 class="portfolio-title">NASA-Themed Web</h3>
+                <p class="portfolio-desc">Pengembangan antarmuka website menggunakan HTML, CSS modern, dan efek Glassmorphism untuk simulasi dashboard observasi.</p>
+                <a href="#" class="btn-outline-space d-inline-block" style="padding: 8px 20px; font-size: 0.85rem; color: var(--neon-pink); border-color: var(--neon-pink);">
+                  <i class="fa-solid fa-code me-2"></i>Detail Misi
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="portfolio-card h-100">
+              <div class="portfolio-img-wrap">
+                <img src="https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?w=800&q=80" alt="Project 3">
+                <div class="portfolio-img-overlay"></div>
+              </div>
+              <div class="portfolio-content">
+                <div class="badge-pill-space mb-3" style="font-size: 0.7rem; padding: 4px 10px; color: #ffb974; border-color: rgba(255,185,116,0.3); background: rgba(255,185,116,0.1);">
+                  <span class="dot" style="background: #ffb974; box-shadow: 0 0 10px #ffb974;"></span> HARDWARE
+                </div>
+                <h3 class="portfolio-title">Server Maintenance</h3>
+                <p class="portfolio-desc">Troubleshooting dan perakitan komponen hardware server untuk memastikan kapabilitas data transfer tanpa bottleneck.</p>
+                <a href="#" class="btn-outline-space d-inline-block" style="padding: 8px 20px; font-size: 0.85rem; color: #ffb974; border-color: #ffb974;">
+                  <i class="fa-solid fa-code me-2"></i>Detail Misi
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    ```
 
     <!-- FOOTER -->
     <footer>
