@@ -74,10 +74,10 @@ function initTyped() {
   if (typedEl && typeof Typed !== 'undefined') {
     new Typed('#typed', {
       strings: [
-        'Future NASA Network Engineer 🚀',
-        'Cybersecurity & Infrastructure Student 🛡️',
-        'Systems & Deep-Space Protocol Tech 🛰️',
-        'Interplanetary Dream Chaser 🌌'
+        'Network Engineer & Cybersecurity Enthusiast',
+        'AI Developer & Systems Administrator',
+        'Computer Network & Telecommunications (TJKT) Student',
+        'Aspiring Deep-Space Communications Engineer'
       ],
       typeSpeed: 50,
       backSpeed: 30,
