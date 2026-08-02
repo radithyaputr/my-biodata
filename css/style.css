@@ -31,6 +31,10 @@
   --form-bg: #ffffff;
   --placeholder-color: #6b7280;
   --footer-border: rgba(11, 61, 145, 0.2);
+  --gold: #a16207;
+  --gold-tint: rgba(161, 98, 7, 0.16);
+  --gold-border: rgba(161, 98, 7, 0.5);
+  --honor-card-bg: linear-gradient(135deg, rgba(255, 215, 0, 0.16), rgba(11, 61, 145, 0.32));
   --terminal-bg: rgba(8, 12, 26, 0.97);
 }
 
@@ -61,6 +65,10 @@
   --form-bg: #141a2e;
   --placeholder-color: #8b9bb4;
   --footer-border: rgba(255, 255, 255, 0.12);
+  --gold: #ffd700;
+  --gold-tint: rgba(255, 215, 0, 0.18);
+  --gold-border: rgba(255, 215, 0, 0.5);
+  --honor-card-bg: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(11, 61, 145, 0.4));
   --terminal-bg: rgba(8, 12, 26, 0.97);
 }
 
