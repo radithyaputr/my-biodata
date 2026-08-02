@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adiel Radithya Putra Irwana — CV</title>
+  <style>
+    /* ============================================================
+       HARVARD-STYLE CV — ATS-Friendly (no tables, no graphics)
+       Print: Ctrl+P (or Cmd+P) -> Save as PDF -> A4
+       ============================================================ */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 12pt;
+      color: #111;
+      background: #f4f4f4;
+      line-height: 1.45;
+    }
+
+    .page {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 48px 56px;
+    }
+
+    .print-btn {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      background: #0b3d91;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 18px;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .print-btn:hover {
+      background: #092d6b;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: 26pt;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .contact-line {
+      font-size: 11pt;
+    }
+
+    .contact-line a {
+      color: #111;
+      text-decoration: none;
+    }
+
+    .contact-line a:hover {
+      text-decoration: underline;
+    }
+
+    h2 {
+      font-size: 13pt;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      border-bottom: 1.5px solid #111;
+      padding-bottom: 2px;
+      margin: 16px 0 8px 0;
+    }
+
+    .entry {
+      margin-bottom: 10px;
+    }
+
+    .entry-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+    }
+
+    .entry-title {
+      font-weight: bold;
+      font-size: 12pt;
+    }
+
+    .entry-sub {
+      font-style: italic;
+    }
+
+    .entry-date {
+      font-style: italic;
+      white-space: nowrap;
+      font-size: 11.5pt;
+    }
+
+    ul {
+      margin: 4px 0 0 22px;
+    }
+
+    li {
+      margin-bottom: 2px;
+    }
+
+    .skills-grid {
+      columns: 2;
+      column-gap: 32px;
+    }
+
+    .skills-grid .entry {
+      break-inside: avoid;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page {
+        max-width: 100%;
+        padding: 0;
+      }
+
+      .print-btn {
+        display: none;
+      }
+
+      @page {
+        size: A4;
+        margin: 16mm 18mm;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
+
+  <div class="page">
+
+    <header>
+      <h1>Adiel Radithya Putra Irwana</h1>
+      <div class="contact-line">
+        Bengkulu, Indonesia &nbsp;·&nbsp;
+        +62 821-7979-0808 &nbsp;·&nbsp;
+        <a href="mailto:radith614@gmail.com">radith614@gmail.com</a> &nbsp;·&nbsp;
+        <a href="https://github.com/radithyaputr" target="_blank">github.com/radithyaputr</a> &nbsp;·&nbsp;
+        <a href="https://www.linkedin.com/in/radithya-putra-9baa99333" target="_blank">linkedin.com/in/radithya-putra</a>
+      </div>
+    </header>
+
+    <h2>Professional Summary</h2>
+    <div class="entry">
+      <p>
+        Computer Network and Telecommunication Engineering (TJKT) student with a national AI competition award (1st
+        Place Bengkulu Province, Top 15 National at LKS 2026) and hands-on experience building AI applications, Linux
+        servers, and enterprise networks. Seeking internships and roles in network engineering, IT infrastructure, and
+        applied AI.
+      </p>
+    </div>
+
+    <h2>Education</h2>
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">SMKN 1 Kota Bengkulu — Computer Network &amp; Telecommunication Engineering
+          (TJKT)</span>
+        <span class="entry-date">2024 – 2027</span>
+      </div>
+      <div class="entry-sub">Class XI TJKT 1 · Expected graduation 2027</div>
+      <ul>
+        <li>Relevant coursework: Cisco routing &amp; switching, Linux administration, server infrastructure,
+          cybersecurity, web development.</li>
+      </ul>
+    </div>
+
+    <h2>Projects &amp; Experience</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">JERNIH. — AI Civic Platform (National LKS 2026 Competition)</span>
+        <span class="entry-date">2025 – 2026</span>
+      </div>
+      <div class="entry-sub">Data Scientist &amp; AI Developer · JERNIH Team (5 members), SMKN 1 Kota Bengkulu</div>
+      <ul>
+        <li>Engineered a multimodal AI civic assistant with a 4-Tier Graceful Fallback System (Groq Llama 3.1 70B →
+          Gemini 1.5 Flash → OpenRouter → offline rule-based), achieving zero-downtime operation across global API
+          clusters.</li>
+        <li>Built 8 integrated modules: RAG-powered Civic Copilot, Hoax Checker, Action Plan Generator, Policy
+          Simulator, Knowledge Graph, OCR Smart Scanner, 3D Predictive Maps (PyDeck), and Architecture Viewer.</li>
+        <li>Implemented responsible-AI safeguards: RAG with temperature 0.2, centralized input sanitization, and
+          automatic failover under API rate limits (&lt;1.5s switch time).</li>
+        <li>Result: <strong>1st Place Bengkulu Province</strong> and <strong>National Rank #15</strong> (score 87.13) at
+          LKS Dikmen 2026, Puspresnas Kemendikdasmen.</li>
+        <li>Stack: Python, Streamlit, LangChain, ChromaDB, PyDeck, NetworkX, Pandas.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">Class 12 TJKT 1 Dedicated Server</span>
+        <span class="entry-date">2025 – 2026</span>
+      </div>
+      <div class="entry-sub">Systems Administrator · SMKN 1 Kota Bengkulu</div>
+      <ul>
+        <li>Assembled a high-throughput rack server for Class 12 TJKT 1: component assembly, thermal &amp; RAM
+          diagnostics.</li>
+        <li>Configured RAID 1 disk mirroring for zero data loss and deployed Linux server OS with kernel security
+          hardening.</li>
+        <li>Set up local DNS routing and web services to host class lab projects with stable, zero-downtime operation.
+        </li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">Enterprise Network Topology Simulation</span>
+        <span class="entry-date">2024 – 2025</span>
+      </div>
+      <div class="entry-sub">Network Engineer · Academic Lab Project</div>
+      <ul>
+        <li>Designed a multi-VLAN enterprise network (Management, Staff, Server Farm, Guest Wi-Fi) with OSPF dynamic
+          routing, DHCP relay, and strict ACL security boundaries in Cisco Packet Tracer.</li>
+      </ul>
+    </div>
+
+    <h2>Honors &amp; Awards</h2>
+    <div class="entry">
+      <ul>
+        <li><strong>1st Place — LKS Dikmen 2026 Artificial Intelligence Exhibition</strong>, Bengkulu Province
+          (Kemendikdasmen Puspresnas).</li>
+        <li><strong>Top 15 National Finalist (Rank #15, Score 87.13)</strong> — LKS Dikmen 2026 AI Exhibition, Indonesia
+          (Official Letter No. 1365/B/H3/PN.00/2026).</li>
+      </ul>
+    </div>
+
+    <h2>Certifications</h2>
+    <div class="entry">
+      <ul>
+        <li>Cisco Networking Essentials — Cisco Networking Academy (verified credential).</li>
+        <li>Cybersecurity Fundamentals — Network Security Pathway.</li>
+        <li>Google IT Support Professional Certificate — in progress (Linux administration, diagnostics, domain
+          management).</li>
+      </ul>
+    </div>
+
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="entry">
+        <div class="entry-sub">Networking</div>
+        <ul>
+          <li>Cisco routing &amp; switching</li>
+          <li>VLAN, OSPF, DHCP, ACL</li>
+          <li>IP subnetting (IPv4/IPv6)</li>
+          <li>Wireshark packet analysis</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <div class="entry-sub">Systems &amp; Security</div>
+        <ul>
+          <li>Linux (Debian/Ubuntu)</li>
+          <li>Bash scripting</li>
+          <li>RAID arrays, server hardening</li>
+          <li>Local DNS &amp; web services</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <div class="entry-sub">Web &amp; Software</div>
+        <ul>
+          <li>HTML5, CSS3, JavaScript (ES6+)</li>
+          <li>Bootstrap 5, Git/GitHub</li>
+          <li>Python, Streamlit</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <div class="entry-sub">AI &amp; Data</div>
+        <ul>
+          <li>LangChain &amp; RAG pipelines</li>
+          <li>LLM orchestration (Groq, Gemini, OpenRouter)</li>
+          <li>ChromaDB, PyDeck, NetworkX</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Languages</h2>
+    <div class="entry">
+      <ul>
+        <li>Indonesian — Native</li>
+        <li>English — Intermediate</li>
+      </ul>
+    </div>
+
+  </div>
+</body>
+
+</html>
