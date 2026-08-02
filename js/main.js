@@ -3,6 +3,7 @@
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initThemeToggle();
   initLoader();
   initAOS();
   initTyped();
@@ -44,6 +45,10 @@ function setTheme(theme) {
       btn.innerHTML = '<i class="fa-solid fa-moon me-1"></i> <span>Dark Mode</span>';
     }
   });
+
+  if (typeof particlesJS !== 'undefined' && document.getElementById('particles-js')) {
+    initParticles();
+  }
 }
 
 // Loader Hide
@@ -90,14 +95,17 @@ function initTyped() {
 // Particles.js Starfield
 function initParticles() {
   if (typeof particlesJS !== 'undefined' && document.getElementById('particles-js')) {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    const particleColors = isDark ? ['#67c8ff', '#fc3d21', '#aeb0b5', '#ffffff'] : ['#0b3d91', '#fc3d21', '#323a45', '#aeb0b5'];
+    const lineColor = isDark ? '#67c8ff' : '#0b3d91';
     particlesJS('particles-js', {
       particles: {
         number: { value: 130, density: { enable: true, value_area: 900 } },
-        color: { value: ['#0b3d91', '#fc3d21', '#323a45', '#aeb0b5'] },
+        color: { value: particleColors },
         shape: { type: 'circle' },
         opacity: { value: 0.8, random: true, anim: { enable: true, speed: 1, opacity_min: 0.1 } },
         size: { value: 2.2, random: true },
-        line_linked: { enable: true, distance: 135, color: '#0b3d91', opacity: 0.15, width: 1 },
+        line_linked: { enable: true, distance: 135, color: lineColor, opacity: 0.15, width: 1 },
         move: { enable: true, speed: 0.7, direction: 'none', random: true, out_mode: 'out' }
       },
       interactivity: {
