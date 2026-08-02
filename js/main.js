@@ -93,11 +93,11 @@ function initParticles() {
     particlesJS('particles-js', {
       particles: {
         number: { value: 130, density: { enable: true, value_area: 900 } },
-        color: { value: ['#ffffff', '#00e5ff', '#ff2e92', '#fc3d21'] },
+        color: { value: ['#0b3d91', '#fc3d21', '#323a45', '#aeb0b5'] },
         shape: { type: 'circle' },
         opacity: { value: 0.8, random: true, anim: { enable: true, speed: 1, opacity_min: 0.1 } },
         size: { value: 2.2, random: true },
-        line_linked: { enable: true, distance: 135, color: '#00e5ff', opacity: 0.15, width: 1 },
+        line_linked: { enable: true, distance: 135, color: '#0b3d91', opacity: 0.15, width: 1 },
         move: { enable: true, speed: 0.7, direction: 'none', random: true, out_mode: 'out' }
       },
       interactivity: {
